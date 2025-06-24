@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 
 def famous_births(scientists):
+    scientist_list = list(scientists.values())
 
-    for each in scientists:
-        print(f"{scientists[each]["name"]} is a great scientist born in {scientists[each]["date_of_birth"]}.")
+    scientist_list.sort(key=lambda person: int(person["date_of_birth"]))
+
+    for each in scientist_list:
+        print(f"{each["name"]} is a great scientist born in {each["date_of_birth"]}.")
 
 
 woman_scientists={
