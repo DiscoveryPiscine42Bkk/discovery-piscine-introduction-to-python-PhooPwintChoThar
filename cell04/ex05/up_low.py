@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 text=input("Enter a text : ")
 for a in text:
     if a.isupper():
