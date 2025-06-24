@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 num=input("Give me a number : ")
 f=float(num)
 

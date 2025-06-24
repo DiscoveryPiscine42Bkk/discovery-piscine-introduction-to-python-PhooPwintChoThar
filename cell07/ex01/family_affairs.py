@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 def find_the_redheads (members):
     redheads=filter(lambda k : members[k]=="red" , members)
 

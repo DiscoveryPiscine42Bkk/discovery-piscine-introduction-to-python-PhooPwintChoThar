@@ -1,6 +1,6 @@
+#!/usr/bin/env python3
+
 import sys
-
-
 
 parameters=sys.argv
 if len(parameters)!=2 or( 'z' not in parameters[1]):

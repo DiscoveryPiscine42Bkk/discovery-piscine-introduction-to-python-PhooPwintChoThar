@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 def average(scores):
     total_scores=0
     for s in scores:
