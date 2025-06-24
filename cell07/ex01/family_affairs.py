@@ -1,6 +1,7 @@
-def find_the_redheads ():
+def find_the_redheads (members):
+    redheads=filter(lambda k : members[k]=="red" , members)
 
-    return
+    return list(redheads)
 
 dupont_family={
     "florian" : "red",
