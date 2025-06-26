@@ -2,19 +2,19 @@ def checkmate (board):
     checkBoard=board.strip().split('\n')
     size=len(checkBoard)
 
-    for row in board:
+    for row in checkBoard:
         if len(row)!=size:
             print("The checkboard is not a square!")
             return
         
-    king=0
+    king=None
     for row in range(size):
         for col in range(size):
             if checkBoard[row][col]=='K':
                 king=(row,col)
                 break
 
-    if king==0 :
+    if king is None :
         print("Invalid Checkboard!There is no King.")
         return
     
@@ -24,7 +24,7 @@ def checkmate (board):
             piece=checkBoard[row][col]
             if piece=='P' and pawnCaptures((row,col) , king):
                 anyPieceFound=True
-                print ("Pawn captured the king. Succcess!")
+                print ("Pawn captured the king. Success!")
                 return
             elif piece=='R' and rookCaptures((row,col) , king , checkBoard):
                 anyPieceFound=True
@@ -40,7 +40,7 @@ def checkmate (board):
                 return
             elif piece=='.':
                 continue
-            else:
+            elif piece !='K':
                 print(f"{piece} is not used to refer to any piece. So it is an empty square.")
                 return
     
