@@ -33,13 +33,13 @@ def checkmate(board):
             elif piece == 'Q' and queenCaptures((row, col), king, checkBoard):
                 print("Queen captured the king. Success!")
                 return
-            elif piece == '.':
+            elif piece == '.'or piece == 'K':
                 continue
-            elif piece == 'K':
-                continue
-            else:
+            elif piece not in {'K', 'P', 'R', 'B', 'Q', '.'}:
                 print(f"{piece} is not used to refer to any piece. So it is an empty square.")
                 return
+
+            
 
     print("No enemy piece can capture the King. Fail!")
 
